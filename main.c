@@ -1,8 +1,14 @@
 #include <stdio.h>
 
-void main()
+ int Sum(int value1, int value2)
+ {
+    int result = value1 + value2;
+     return result;
+ }
+
+ void main()
 {
-    int money;
-    money = 3000;
-    printf("money에 저장된 값은 %d",money);
+    int s;
+    s = Sum(2,3);
+    printf("더하기 작업의 결과는 %d\n",s);
 }

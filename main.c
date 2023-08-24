@@ -2,7 +2,5 @@
 
  void main()
  {
-     putchar('H');
-     putchar('i');
-     putchar('~');
+     puts("Hi~");
  }

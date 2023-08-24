@@ -2,7 +2,8 @@
 
  void main()
  {
-    int data1 = -1;
-    unsigned int data2 = 4294967295;
-    printf("%d, %u, %d, %u",data1,data1,data2,data2);
+    int data1 = 10;
+    int data2 = 010;
+    int data3 = 0X10;
+    printf("%x, %d, %o",data1,data2,data3);
  }

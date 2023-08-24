@@ -3,5 +3,5 @@
  void main()
  {
     float value = 2.1f;
-    printf("%f",value);
+    printf("%f, %d",value,value);
  }

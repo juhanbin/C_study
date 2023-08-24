@@ -2,8 +2,6 @@
 
  void main()
  {
-    int data1 = 10;
-    int data2 = 010;
-    int data3 = 0X10;
-    printf("%x, %d, %o",data1,data2,data3);
+    int data = 7;
+     printf("[%d] [%5d]",data,data);
  }

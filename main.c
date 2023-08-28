@@ -2,8 +2,17 @@
 
  void main()
  {
-     int data = 5;
-     if(data > 3) printf("3보다 큰 수입니다\n");
-     else printf("data는 3보다 작거나 같은 수 입니다\n");
-     printf("작업종료\n");
+     int score = 92;
+     char grade;
+     if(score >= 90)
+     {
+         grade = 'A';
+         printf("점수는 %d이고 등급은 %c입니다.\n",score,grade);
+     }
+     else
+     {
+         grade = 'B';
+         printf("점수는 %d이고 등급은 %c입니다\n",score,grade);
+     }
+     printf("작업 종료\n");
  }

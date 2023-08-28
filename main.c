@@ -2,12 +2,12 @@
 
  void main()
  {
-    int m,n;
-    for(n=5;m<7;m++)
+    int step,i;
+    for(step = 2;step<=9;step++)
     {
-        for(n=0;n<3;n++)
+        for(i=1;i<=9;i++)
         {
-            printf("m(%d)-n(%d)\n",m,n);
-        };
+            printf("%d * %d = %d\n",step,i,step*i);
+        }
     }
  }

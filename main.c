@@ -11,5 +11,7 @@
 
  void main()
  {
-    ShowMultiplication(5);
+    int m;
+    for(m=2; m<9; m++)
+    ShowMultiplication(m);
  }

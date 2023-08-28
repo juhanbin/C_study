@@ -1,17 +1,13 @@
 #include <stdio.h>
 
- void ShowMultiplication(int step)
- {
-     int i;
-     for(i=1; i<=9; i++)
-     {
-         printf("%d * %d = %d\n",step,i,step*i);
-     }
- }
-
  void main()
  {
-    int m;
-    for(m=2; m<9; m++)
-    ShowMultiplication(m);
+    int m,n;
+    for(n=5;m<7;m++)
+    {
+        for(n=0;n<3;n++)
+        {
+            printf("m(%d)-n(%d)\n",m,n);
+        };
+    }
  }

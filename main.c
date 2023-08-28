@@ -2,12 +2,13 @@
 
  void main()
  {
-    int step,i;
-    for(step = 2;step<=9;step++)
+    int m,n;
+    for(m=5;m<7;m++)
     {
-        for(i=1;i<=9;i++)
+        for(n=0;n<3;n++)
         {
-            printf("%d * %d = %d\n",step,i,step*i);
+            if (m == 5 && n == 1)break;
+            printf("m(%d)-n(%d)\n",m,n);
         }
     }
  }

@@ -4,6 +4,7 @@
 
  int Sum(int data1, int data2)
  {
+     int result;
     result = data1 + data2;
  }
  int main()

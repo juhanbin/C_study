@@ -3,8 +3,11 @@
 
  int main()
  {
-    int data_length;
-    char data[10] = {'h','a','p','p','y',};
-    data_length = strlen(data);
-     printf("data lenth = %d\n",data_length);
+    char data[10] = {'a','b','c',0};
+    char result[16];
+
+    strcpy(result,data);
+    strcat(result,"def");
+
+     printf("%s + \"def\" = %s\n",data, result);
  }

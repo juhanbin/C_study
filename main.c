@@ -1,20 +1,15 @@
 #include <stdio.h>
 
- void Swap(int *pa, int *pb)
+ int GetData(void *p_data,char type)
  {
-    int temp = *pa;
-    *pa=*pb;
-    *pb=temp;
+    int result = 0;
+    if(type == 1) result = *(char *)p_data;
+    else if(type == 2)result = *(short *)p_data;
+    else if(type == 4) result = *(int *)p_data;
+     return result;
  }
-
  int main()
  {
-    int start = 96, end = 5;
-
-     printf("before : start = %d, end = %d\n",start,end);
-     if(start > end)
-     {
-         Swap(&start,&end);
-     }
-     printf("after : start = %d, end = %d\n",start,end);
+    int data = 0x12345678;
+     printf("%X\n", GetData(&data,2));
  }

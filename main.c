@@ -1,10 +1,10 @@
 #include <stdio.h>
 
- void Swap(int a, int b)
+ void Swap(int *pa, int *pb)
  {
-    int temp = a;
-    a=b;
-    b=temp;
+    int temp = *pa;
+    *pa=*pb;
+    *pb=temp;
  }
 
  int main()
@@ -14,7 +14,7 @@
      printf("before : start = %d, end = %d\n",start,end);
      if(start > end)
      {
-         Swap(start,end);
+         Swap(&start,&end);
      }
      printf("after : start = %d, end = %d\n",start,end);
  }

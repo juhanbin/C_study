@@ -2,10 +2,7 @@
 
  int main()
  {
-     int input_data = getchar();
-     rewind(stdin);
-     printf("first input : %c\n",input_data);
-     input_data = getchar();
-     rewind(stdin);
-     printf("second input : %c\n",input_data);
+    char input_string[10];
+    fgets(input_string,10,stdin);
+     printf("input : %s\n",input_string);
  }

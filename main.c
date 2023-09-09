@@ -1,17 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
 
  int main()
  {
-    int first_num, second_num;
-    char first_string[16],second_string[16];
+    int int_data;
+    float float_data;
 
-     printf("input first number : ");
-     gets(first_string);
-     printf("input second number : ");
-     gets(second_string);
+     scanf("%d",&int_data);
+     scanf("%f",&float_data);
 
-     first_num = atoi(first_string);
-     second_num = atoi(second_string);
-     printf("%d + %d = %d\n",first_num,second_num,first_num+second_num);
+     printf("input : %d, %f\n",int_data,float_data);
  }

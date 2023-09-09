@@ -2,11 +2,7 @@
 
  int main()
  {
-    int int_data;
-    float float_data;
-
-     scanf("%d",&int_data);
-     scanf("%f",&float_data);
-
-     printf("input : %d, %f\n",int_data,float_data);
+     char temp[32];
+     scanf("%s",temp);
+     printf("input string : %s \n", temp);
  }

@@ -1,15 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 
- int ArrayToInteger(char string[])
- {
-    int count = 0, num = 0;
-    while(string[count] != 0)
-    {
-        num = num * 10 + string[count] - '0';
-        count ++;
-    }
-     return num;
- }
  int main()
  {
     int first_num, second_num;
@@ -20,7 +11,7 @@
      printf("input second number : ");
      gets(second_string);
 
-     first_num = ArrayToInteger(first_string);
-     second_num = ArrayToInteger(second_string);
+     first_num = atoi(first_string);
+     second_num = atoi(second_string);
      printf("%d + %d = %d\n",first_num,second_num,first_num+second_num);
  }

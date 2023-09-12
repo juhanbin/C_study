@@ -1,20 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
+#define MAX_COUNT   5
 
  int main()
  {
-    char *p_name;
-    p_name = (char *)malloc(32);
-    if(p_name != NULL)
-    {
-        printf("Your name : ");
-        scanf("%s",p_name);
-
-        printf("Hi~ %s\n",p_name);
-        free(p_name);
-    }
-    else
-    {
-        printf("memory allocation error!");
-    }
+    int num[MAX_COUNT],count = 0,sum = 0,i;
+     while (count < MAX_COUNT)
+     {
+         printf("숫자를 입력하세요 (9999를 누르면 종료) : ");
+         scanf("%d",num+count);
+         if(num[count] == 9999) break;
+         count++;
+     }
+     for(i = 0;i < count;i++)
+     {
+         if(i>0)
+             printf(" + ");
+         printf("%d",num[i]);
+         sum = sum + num[i];
+     }
  }

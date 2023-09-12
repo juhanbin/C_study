@@ -2,7 +2,7 @@
 
  int main()
  {
-     char temp[32];
-     scanf("%s",temp);
-     printf("input string : %s \n", temp);
+    int num1, num2, num3;
+    scanf("%o %d %x",&num1,&num2,&num3);
+    printf("input : %d, %d, %d \n",num1,num2,num3);
  }

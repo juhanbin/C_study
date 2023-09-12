@@ -1,15 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
  int main()
  {
-    char data[5] = {1,2,3,4,5};
-    int result = 0,i;
-    char *p = data;
-
-    for(i= 0;i<5;i++)
+    char *p_name;
+    p_name = (char *)malloc(32);
+    if(p_name != NULL)
     {
-        result = result + *p;
-        p++;
+        printf("Your name : ");
+        scanf("%s",p_name);
+
+        printf("Hi~ %s\n",p_name);
+        free(p_name);
     }
-     printf("data 배열의 가 요소의 합은 %d입니다\n",result);
+    else
+    {
+        printf("memory allocation error!");
+    }
  }

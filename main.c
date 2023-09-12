@@ -2,7 +2,20 @@
 
  int main()
  {
-    int num1, num2, num3;
-    scanf("%o %d %x",&num1,&num2,&num3);
-    printf("input : %d, %d, %d \n",num1,num2,num3);
+    int num=0;
+     while (1)
+     {
+         printf("input age : ");
+         scanf("%d",&num);
+
+         if(num > 0 && num <= 130)
+         {
+             break;
+         }
+         else
+         {
+             printf("Incorrect Age!!\n");
+         }
+     }
+     printf("your age : %d \n",num);
  }

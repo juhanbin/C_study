@@ -2,26 +2,14 @@
 
  int main()
  {
-    int num=0;
-     while (1)
-     {
-         printf("input age : ");
-         if(scanf("%d",&num)==0) {
-             rewind(stdin);
-             printf("[Enter]digit number!!\n");
-         }
-         else
-         {
-             if(num > 0 && num <= 130)
-             {
-                 break;
-             }
-             else
-             {
-                 printf("Incorrect Age!!\n");
-             }
-         }
+    char data[5] = {1,2,3,4,5};
+    int result = 0,i;
+    char *p = data;
 
-     }
-     printf("your age : %d \n",num);
+    for(i= 0;i<5;i++)
+    {
+        result = result + *p;
+        p++;
+    }
+     printf("data 배열의 가 요소의 합은 %d입니다\n",result);
  }

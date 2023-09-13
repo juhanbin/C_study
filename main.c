@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+ void GetMyData(int *q)
+ {
+    q = (int *)malloc(8);
+ }
  int main()
  {
-    short **pp;
-     pp = (short **) malloc(sizeof (short *));
-     *pp = (short *) malloc(sizeof (short));
-
-     **pp = 10;
-     printf("**pp : %d\n",**pp);
-     free(*pp);
-     free(pp);
+    int *p;
+     GetMyData(p);
+     *p = 5;
+     free(p);
  }

@@ -1,14 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 
  int main()
  {
-    short data = 3;
-    short *p = &data;
-    short **pp = &p;
+    short **pp;
+     pp = (short **) malloc(sizeof (short *));
+     *pp = (short *) malloc(sizeof (short));
 
-     printf("[Before ] data : %d\n",data);
-     *p = 4;
-     printf("[Use *p ] data : %d\n",data);
-     **pp = 5;
-     printf("[Use **PP] data : %d\n",data);
+     **pp = 10;
+     printf("**pp : %d\n",**pp);
+     free(*pp);
+     free(pp);
  }

@@ -1,22 +1,28 @@
 #include <stdio.h>
 #define MAX_COUNT   5
 
-typedef char NAME_TYPE[14];
+typedef struct Peple
+{
+    char name[14];
+    unsigned short int age;
+    float height;
+    float weight;
+}Person;
 
-int AddFriend(NAME_TYPE *p_name,unsigned short int *p_age,
-              float *p_height, float *p_weight,int count)
+int AddFriend(Person *p_friend,int count)
 {
     if(count < MAX_COUNT)
     {
+        p_friend = p_friend + count;
         printf("\n새로운 친구 정보를 입력하세요\n");
         printf("1. 이름 : ");
-        scanf("%s",*(p_name + count));
+        scanf("%s",p_friend->name);
         printf("2. 나이 : ");
-        scanf("%hu",p_age + count);
+        scanf("%hu",&p_friend->age);
         printf("3. 키 : ");
-        scanf("%f",p_height + count);
+        scanf("%f",&p_friend->height);
         printf("4. 몸무게 : ");
-        scanf("%f",p_weight + count);
+        scanf("%f",&p_friend->weight);
         printf("입력을 완료했습니다.\n\n");
         return 1;
     }
@@ -27,8 +33,7 @@ int AddFriend(NAME_TYPE *p_name,unsigned short int *p_age,
     }
     return 0;
 }
-void ShowFriendList(NAME_TYPE *p_name,unsigned short int *p_age,
-                    float *p_height,float *p_weight,int count)
+void ShowFriendList(Person *p_friend, int count)
 {
     int i;
     if(count > 0)
@@ -37,8 +42,8 @@ void ShowFriendList(NAME_TYPE *p_name,unsigned short int *p_age,
         printf("==================================\n");
         for(i = 0;i<count;i++)
         {
-            printf("%-14s,%3d,%6.2f,%6.2f\n",*(p_name + i), *(p_age + i),
-                   *(p_height + i),*(p_weight + i));
+            printf("%-14s,%3d,%6.2f,%6.2f\n",p_friend->name, p_friend->age,
+                   p_friend->height,p_friend->weight);
         }
         printf("=================================\n\n");
     }
@@ -49,7 +54,7 @@ void ShowFriendList(NAME_TYPE *p_name,unsigned short int *p_age,
 }
 int main()
 {
-    NAME_TYPE name[MAX_COUNT];
+    Person friends[MAX_COUNT];
     unsigned short int age[MAX_COUNT];
     float height[MAX_COUNT];
     float weight[MAX_COUNT];
@@ -68,11 +73,11 @@ int main()
 
         if(num == 1)
         {
-            if(1 == AddFriend(name,age,height,weight,count)) count++;
+            if(1 == AddFriend(friends,count)) count++;
         }
         else if(num == 2)
         {
-            ShowFriendList(name,age,height,weight,count);
+            ShowFriendList(friends,count);
         }
         else if(num == 3)
         {

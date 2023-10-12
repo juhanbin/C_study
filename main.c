@@ -2,17 +2,17 @@
 
 int main()
 {
-    int score = 92;
-    char grade;
-    if(score >=90)
+    int year =2015, month =12, day =31;
+    day++;
+    if(day > 31)
     {
-        grade='A';
-        printf("점수는 %d이고 등금은 %c입니다.\n");
+        month++;
+        day = 1;
+        if(month >12)
+        {
+            year++;
+            month = 1;
+        }
     }
-    else
-    {
-        grade ='B';
-        printf("점수는 %d이고 등금은 %c입니다.\n");
-    }
-    printf("작업 종료");
+    printf("Date : %d년 %d월 %d일\n",year,month,day);
 }

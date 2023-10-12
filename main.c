@@ -2,8 +2,8 @@
 
 int main()
 {
-    int data1, data2;
-    data1 = 5;
-    data2 = data1;
-    printf("data1 = %d, data2 = %d\n",data1,data2);
+    int data = 5;
+    if(data > 3)
+        printf("data는 3보다 큰 수입니다\n");
+    printf("작업 종료");
 }

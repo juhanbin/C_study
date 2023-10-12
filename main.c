@@ -2,17 +2,27 @@
 
 int main()
 {
-    int year =2015, month =12, day =31;
-    day++;
-    if(day > 31)
+    int score = 86;
+    char grade;
+
+    if (score >=90)
+        grade = 'A';
+    else
     {
-        month++;
-        day = 1;
-        if(month >12)
+        if(score >= 80)
+            grade = 'B';
+        else
         {
-            year++;
-            month = 1;
+            if(score >= 70)
+                grade = 'C';
+            else
+            {
+                if(score >= 60)
+                    grade = 'D';
+                else
+                    grade = 'F';
+            }
         }
     }
-    printf("Date : %d년 %d월 %d일\n",year,month,day);
+    printf("당신의 점수는 %d점이고 등급은 %c입니다.\n",score,grade);
 }

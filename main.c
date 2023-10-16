@@ -11,5 +11,7 @@ int main()
                 break;
             printf("m(%d) - n(%d)\n",m,n);
         }
+        if(m == 5 && n == 1)
+            break;
     }
 }

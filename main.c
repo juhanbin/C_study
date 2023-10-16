@@ -2,27 +2,12 @@
 
 int main()
 {
-    int score = 86;
-    char grade;
-
-    switch(score/10)
+    int sum = 0, num;
+    for(num =1; num <=5; num++)
     {
-        case 10 :
-        case 9:
-            grade = 'A';
-            break;
-        case 8:
-            grade = 'B';
-            break;
-        case 7:
-            grade = 'C';
-            break;
-        case 6:
-            grade = 'D';
-            break;
-        default:
-            grade = 'F';
-            break;
+        printf("num(%d) + sum(%d) = ",num,sum);
+        sum = sum + num;
+        printf("%d\n",sum);
     }
-    printf("당신의 점수는 %d점이고 등급은 %c입니다",score,grade);
+    printf("\nResult : num = %d sum = %d\n",num,sum);
 }

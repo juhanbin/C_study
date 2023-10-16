@@ -2,14 +2,9 @@
 
 int main()
 {
-    int sum = 0;
-    int num = 1;
-    do
+    int i;
+    for(i=1;i<=9;i++)
     {
-        printf("num(%d) + sum(%d) = ",num,sum);
-        sum = sum +num;
-        printf("%d\n",sum);
-        num++;
-    } while (num <= 5);
-    printf("\nResult : num = %d sum = %d\n",num,sum);
+        printf("2 * %d\n",i,2*i);
+    }
 }

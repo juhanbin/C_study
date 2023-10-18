@@ -1,25 +1,24 @@
 #include <stdio.h>
 
-unsigned char GetBit(unsigned char dest_data, unsigned char bit_num)
+unsigned char ModifyBit(unsigned char dest_data, unsigned char bit_num, char value)
 {
-    unsigned char bit_state = 0;
+    unsigned char mask;
     if(bit_num < 8)
     {
-        bit_state = dest_data & (0x01 << bit_num);
-        bit_state = bit_state >> bit_num;
+        mask = 0x01 << bit_num;
+        if(value == 1) dest_data = dest_data | mask;
+        else dest_data = dest_data & ~mask;
     }
-    return bit_state;
+    return dest_data;
 }
+
 int main()
 {
-    unsigned char lamp_state = 0x75;
-    unsigned char bit_state;
-    int i;
+    unsigned char lamp_state = 0x7F;
     printf("%X->",lamp_state);
-    for(i=0;i<8;i++)
-    {
-        bit_state = GetBit(lamp_state, 7-i);
-        printf("%d",bit_state);
-    }
-    printf("\n");
+
+    lamp_state = ModifyBit(lamp_state,3,0);
+    printf("%X->",lamp_state);
+    lamp_state = ModifyBit(lamp_state,3,1);
+    printf("%X",lamp_state);
 }

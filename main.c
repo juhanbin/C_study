@@ -1,14 +1,13 @@
 #include <stdio.h>
 
+int result;
 int Sum(int data1, int data2)
 {
-    int result = data1 + data2;
-    return result;
+    result = data1 + data2;
 }
 
 int main()
 {
-    int result;
-    result = Sum(5,3);
+    Sum(5,3);
     printf("5 + 3 = %d\n",result);
 }
